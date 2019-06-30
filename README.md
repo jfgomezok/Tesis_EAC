@@ -5,8 +5,8 @@
 
 ## Overview
 
-Rutinas en R de la tesis doctoral de Eduardo Ariel Corso, originalmente
-distribuidas en Matlab.
+Rutinas en R de la Sección V de la tesis doctoral de Eduardo Ariel
+Corso, originalmente distribuidas en Matlab.
 
 Trabajo original disponible en:
 <http://bibliotecadigital.econ.uba.ar/econ/collection/tesis/document/1501-1246_CorsoEA>
@@ -25,12 +25,17 @@ this screen, and then clicking “Download ZIP”.
   - [Rstudio
     Version](https://www.rstudio.com/products/rstudio/download/)
 
-  - Packages: Please refer to `Load_packages.R` script to load the
-    required packages.
+## Arquitectura de archivos:
 
-## Directory structure
+  - `descriptivo.R`: Análisis gráfico de los datos.
 
-TBD
+  - `MDUE.R`: Maximización directa de la utilidad esperada, empleando
+    toda la muestra de datos, para distintos niveles de aversión al
+    riesgo y de costos de transacción.
+
+  - `Taylor4.R`: Aproximación de Taylor de orden 4.
+
+  - `momentos.R`: Cálculo de las matrices de momentos muestrales.
 
 ## Contributing
 
