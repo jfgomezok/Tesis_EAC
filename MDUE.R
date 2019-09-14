@@ -1,9 +1,14 @@
+
+# Carga de paquetes
 library(tidyverse)
 library(NlcOptim)
 
-
+# carga de datos
 data <- read.csv("raw_data/retornos.csv")[,-1]
-# str(data)
+
+#Lectura de su estructura
+class(data)
+str(data)
 
 
 # vector fila de ceros: limite inferior que puede adoptar 'x'
@@ -28,8 +33,8 @@ v2 <- t(c(1, 0, 0, 0))
 
 
 # Vector columa de costos de transaccion para cada activo.
-k <- t(t(c(0.005, 0.026, 0.042, 0.062)))
-# k <- t(t(c(0, 0, 0, 0)))
+# k <- t(t(c(0.005, 0.026, 0.042, 0.062)))
+k <- t(t(c(0, 0, 0, 0)))
 
 # class(k)
 # dim(k)
@@ -97,7 +102,11 @@ demandas_aux <- gather(demandas, -5, key = 'activo', value = 'tenencia')
 ggplot(demandas_aux,
        aes(x = aversion_riesgo, y = tenencia, color=activo))+
   geom_line()+
-  geom_point()
+  geom_point()+
+  ggtitle("Optimización de cartera", 
+          subtitle = "Tenencias óptimas de activos para distintos niveles de averisón al riesgo") +
+  labs(caption = "Fuente: Tesis Doctoral de Eduardo Ariel Corso")+
+  theme(legend.position="top")
   
 
 
