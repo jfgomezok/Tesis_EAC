@@ -1,7 +1,10 @@
 
-# Carga de paquetes
-library(tidyverse)
-library(stargazer)
+# Si no está instalado, instalamos el paquete "pacman"
+if ( !require("pacman") ) install.packages("pacman")
+
+# Instalamos y Cargamos los paquetes necesarios
+pacman::p_load( tidyverse, stargazer)
+
 
 
 # Carga de datos
