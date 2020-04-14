@@ -57,7 +57,7 @@ f <- t(rep(1, dim(data)[1]))
 # realizaciones le asigna la misma probabilidad de ocurrencia en el
 # período t +1. Asumir que el agente utiliza la distribución empírica
 # correspondiente a todo el período muestral equivale a suponer que todos
-# los eventos pasados tienen el mismo peso 1 n en la memoria del agente,
+# los eventos pasados tienen el mismo peso 1/n en la memoria del agente,
 # donde n es el número de realizaciones pasadas."
 
 # Tiene un -1 adelante porque la funcion "solnl" MINIMIZA, y  nosotros estamos buscando un maximo.
@@ -157,8 +157,8 @@ plot(g)
 # se puede hacer lo mismo, pero todo junto!
 ggplot(demandas_aux,
             aes(x = aversion_riesgo, y = tenencia, color=activo))+
-  geom_line() + geom_point() +
-  labs(title = "Optimización de cartera",
+  geom_line() +geom_point() +
+  labs(title = "Optimización de cartera: Maximización directa de la utilidad esperada",
               subtitle = "Tenencias óptimas de activos para distintos niveles de averisón al riesgo",
               caption = "Fuente: Tesis Doctoral de Eduardo Ariel Corso") +
   theme_bw() +
